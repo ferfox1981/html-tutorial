@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h1>Evento onclick </h1>
+
+  <p>Clique no botão para ver Javascript alterar o DOM e a página</p>
+
+  <button onclick="myFunction()">Click me</button>
+
+  
+  <table border=1>
+    <tr>
+        <td>Primeira Célula</td>
+        <td>Segunda Célula</td>
+        <td>Terceira Célula</td>
+        <td>Quarta Célula</td>
+      </tr>
+      <tr>
+        <td>Quinta Célula</td>
+        <td>Sexta Célula</td>
+        <td>Sétima Célula</td>
+        <td>Oitava Célula</td>
+      </tr>
+</table>
+<br>
+<table border=1>
+  <tr>
+      <td>Outra Primeira Célula</td>
+      <td>Outra Segunda Célula</td>
+      <td>Outra Terceira Célula</td>
+      <td>Outra Quarta Célula</td>
+    </tr>
+    <tr>
+      <td>Outra Quinta Célula</td>
+      <td>Outra  Sexta Célula</td>
+      <td>Outra Sétima Célula</td>
+      <td>Outra Oitava Célula</td>
+    </tr>
+</table>
+
+  <script>
+    function myFunction() {
+      let tables = document.getElementsByTagName('table')
+      alert(tables.length)
+      
+    }
+  </script>
+
+</body>
+
+</html>

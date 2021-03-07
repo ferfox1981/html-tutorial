@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Externo</title>
+
+  <script>
+    
+    function insereCelula(linha, conteudo){
+        let celula = document.createElement("td")
+        celula.innerHTML=conteudo
+        linha.appendChild(celula)
+
+    }
+    function insereLinha(tabela){
+        let linha = document.createElement("tr")
+        let nome = document.forms['meuForm']['lname'].value
+        insereCelula(linha, nome)
+        let sobrenome = document.forms['meuForm']['lsobrenome'].value
+        insereCelula(linha, sobrenome)
+        let endereco = document.forms['meuForm']['lend'].value
+        insereCelula(linha, endereco)
+        let telefone = document.forms['meuForm']['ltel'].value
+        insereCelula(linha, telefone)
+        let mail = document.forms['meuForm']['lmail'].value
+        insereCelula(linha, mail)
+        let prof = document.forms['meuForm']['lprofissao'].value
+        insereCelula(linha, prof)
+        tabela.appendChild(linha)
+    }
+
+    function criaLinha(){
+      
+      let tabela = document.getElementById('tabelaDados')
+      insereLinha(tabela)
+    }
+    
+  </script>
+
+</head>
+
+<body>
+
+  <h2>Exercício HTML</h2>
+
+  <form id="meuForm">
+    <label for="lname">Nome:</label><br>
+    <input type="text" id="lname" name="lname" value=""><br>
+    <label for="lsobrenome">Sobrenome:</label><br>
+    <input type="text" id="lsobrenome" name="lsobrenome" value=""><br><br>
+    <label for="lend">Endereço:</label><br>
+    <input type="text" id="lend" name="lend" value=""><br><br>
+    <label for="ltel">Telefone:</label><br>
+    <input type="text" id="ltel" name="ltel" value=""><br><br>
+    <label for="lmail">Email:</label><br>
+    <input type="email" id="lmail"  pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" 
+    name="lmail" value=""><br><br>
+    <label for="lprofissao">Profissão:</label><br>
+    <select name="lprofissao" id="lprofissao">
+        <option value="Professor">Professor</option>
+        <option value="Medico">Médico</option>
+        <option value="Advogado">Advogado</option>
+    </select><br><br>
+    <input type="button" value="Enviar" onclick="criaLinha()">
+  </form>
+
+  <p>Voce pode clicar em Submit.</p>
+  <table id="tabelaDados" border="1">
+    <tr>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Endereço</th>
+        <th>Telefone</th>
+        <th>Email</th>
+        <th>Profissão</th>
+    </tr>
+  </table>
+
+</body>
+
+</html>
