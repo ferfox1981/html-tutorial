@@ -7,12 +7,13 @@
 
   <p>Clique no botão para ver Javascript alterar o DOM e a página</p>
 
-  <button onclick="myFunction()">Click me</button>
+  <button onclick="funcao()">Click me</button>
 
-  <p id="demo"></p>
+  <p id="demo"> </p>
 
   <script>
-    function myFunction() {
+    function funcao() {
+      //console.log(document.getElementById("demo"))
       document.getElementById("demo").innerHTML = "Hello World";
     }
 
